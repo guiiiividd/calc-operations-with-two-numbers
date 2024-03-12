@@ -49,10 +49,35 @@ form .input-group input[type="number"]:hover {
     border: none;
 }
 
-form .operations-options-box {}
-form .operations-options-box label {}
+form .operations-options-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .operations-options-box label {
+    background-color: #005791;
+    padding: 10px;
+    font-size: large;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 form .operations-options-box input {
+    display: none;
     margin-left: 10px;
+}
+
+form .operations-options-box label:visited{
+    background-color: red;
 }
 
 form button {

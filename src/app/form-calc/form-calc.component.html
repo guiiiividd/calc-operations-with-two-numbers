@@ -3,35 +3,22 @@
 
   <div class="input-group">
     <label for="num1">Número 01:</label>
-    <input type="number" name="num1" id="num1" />
+    <input type="number" name="num1" id="num1" [(ngModel)]="num1" />
   </div>
 
   <div class="input-group">
     <label for="num2">Número 02:</label>
-    <input type="number" name="num2" id="num2" />
+    <input type="number" name="num2" id="num2" [(ngModel)]="num2" />
   </div>
 
   <div class="operations-options-box">
-    <input type="radio" name="Option" id="additionOption" />
-    <label for="additionOption">Adição</label>
-
-    <input type="radio" name="Option" id="subtractionOption" />
-    <label for="subtractionOption">Subtração</label>
-
-    <input type="radio" name="Option" id="multiplicationOption" />
-    <label for="multiplicationOption">Multiplicação</label>
-
-    <input type="radio" name="Option" id="divisionOption" />
-    <label for="divisionOption">Divisão</label>
-
-    <input type="radio" name="Option" id="percentageOption" />
-    <label for="percentageOption">Porcentagem</label>
-
-    <input type="radio" name="Option" id="squareRootOption" />
-    <label for="squareRootOption">Raiz Quadrada</label>
+    <button (click)="onClickSum()">+</button>
+    <button (click)="onClickSubtraction()">—</button>
+    <button (click)="onClickMultiplication()">x</button>
+    <button (click)="onClickDivision()">÷</button>
+    <button (click)="onClickPercentage()">%</button>
+    <button (click)="onClickSquareRoot()">√</button>
   </div>
 
-  <button>Calcular</button>
-
-  <p id="result">{{ res }}</p>
+  <p id="result">{{ response }}</p>
 </form>
