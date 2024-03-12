@@ -1,20 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 form {
     width: 80vw;
+    max-width: 650px;
     margin: 10px auto;
-    padding: 15px;
+    padding: 15px 50px;
     
     display: flex;
     flex-direction: column;
     gap: 35px;
 
-    border: 1px solid #000000;
-    border-radius: 5px;
+    border: 1px solid #005791;
+    border-radius: 10px;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 form h1 {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
+    font-size: 2.2rem;
+    /* margin-bottom: 0; */
+    color: #005791;
 }
 
 form .input-group {
@@ -24,6 +32,7 @@ form .input-group {
 
 form .input-group label {
     font-weight: bold;
+    font-size: 1.2rem;
     margin-bottom: 4px;
 }
 
@@ -33,6 +42,7 @@ form .input-group input[type="number"] {
     padding: 10px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
 }
 
 form .input-group input[type="number"]:hover {
@@ -47,11 +57,13 @@ form .operations-options-box input {
 
 form button {
     border: none;
-    background-color: #056605;
+    /* background-color: #056605; */
+    background-color: #005791;
     padding: 10px;
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 1.2rem;
     width: 50%;
     margin: 0 auto;
     border-radius: 10px;
@@ -59,10 +71,12 @@ form button {
 }
 
 form button:hover {
-    background-color: #077c07;
+    /* background-color: #077c07; */
+    background-color: #00436f;
 }
 
 form #result {
     text-align: center;
     font-weight: bold;
+    font-size: 1.4rem;
 }
