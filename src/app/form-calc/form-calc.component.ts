@@ -14,45 +14,45 @@ export class FormCalcComponent {
 
   dataLocalStorage: string | null = null;
   classe: string = "";
-  
+
   onClickSum(){
     this.result = this.num1 + this.num2;
     this.operation = `(${this.num1} + ${this.num2})`;
-    this.generateResponse("soma", this.operation, this.result);
+    this.generateResponse("soma");
   }
 
   onClickSubtraction(){
     this.result = this.num1 - this.num2;
     this.operation =  `(${this.num1} - ${this.num2})`;
-    this.generateResponse("subtração", this.operation, this.result);
+    this.generateResponse("subtração");
   }
 
   onClickMultiplication(){
     this.result = this.num1 * this.num2;
     this.operation =  `(${this.num1} * ${this.num2})`;
-    this.generateResponse("multiplicação", this.operation, this.result);
+    this.generateResponse("multiplicação");
   }
 
   onClickDivision(){
     this.result = this.num1 / this.num2;
     this.operation =  `(${this.num1} / ${this.num2})`;
-    this.generateResponse("divisão", this.operation, this.result);
+    this.generateResponse("divisão");
   }
 
   onClickPercentage(){
     this.result = (this.num2 / 100) * this.num2;
     this.operation =  `(${this.num1} % ${this.num2})`;
-    this.generateResponse("porcentagem", this.operation, this.result);
+    this.generateResponse("porcentagem");
   }
 
   onClickSquareRoot(){
     this.result = Math.pow(this.num1, this.num2);
     this.operation =  `(${this.num1} ^ ${this.num2})`;
-    this.generateResponse("potência", this.operation, this.result);
+    this.generateResponse("potência");
   }
 
-  generateResponse(option: string, operation: string, resultOperation: number){
-    this.response = `O resultado da ${option} entre ${this.num1} e ${this.num2} ${operation} é: ${resultOperation}`;
+  generateResponse(option: string){
+    this.response = `O resultado da ${option} entre ${this.num1} e ${this.num2} ${this.operation} é: ${this.result}`;
   }
 
   timerDarkMode = setInterval(() => this.getDarkModeData(), 1000);
