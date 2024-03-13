@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormCalcComponent } from './form-calc/form-calc.component';
 import { FormsModule } from '@angular/forms';
 import { DarkModeSectionComponent } from './dark-mode-section/dark-mode-section.component';
+import { NgClass } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DarkModeSectionComponent } from './dark-mode-section/dark-mode-section.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgClass
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,6 +23,11 @@ form {
     font-family: 'Roboto', sans-serif;
 }
 
+form.dark{
+    background-color: var(--bg-dark-theme);
+    color: var(--white);
+}
+
 form h1 {
     text-transform: uppercase;
     font-weight: bold;
@@ -49,6 +54,11 @@ form .input-group input[type="number"] {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.2);
     font-size: 1.2rem;
+}
+
+form.dark .input-group input[type="number"] {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 form .input-group input[type="number"]:hover {

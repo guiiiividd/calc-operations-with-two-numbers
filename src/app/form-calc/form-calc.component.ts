@@ -12,6 +12,9 @@ export class FormCalcComponent {
   result: number = 0;
   response: string = "";
 
+  dataLocalStorage: string | null = null;
+  classe: string = "";
+  
   onClickSum(){
     this.result = this.num1 + this.num2;
     this.operation = `(${this.num1} + ${this.num2})`;
@@ -50,5 +53,17 @@ export class FormCalcComponent {
 
   generateResponse(option: string, operation: string, resultOperation: number){
     this.response = `O resultado da ${option} entre ${this.num1} e ${this.num2} ${operation} é: ${resultOperation}`;
+  }
+
+  timerDarkMode = setInterval(() => this.getDarkModeData(), 1000);
+
+  getDarkModeData(){
+    this.dataLocalStorage = localStorage.getItem('darkIsActivated');
+    console.log(this.dataLocalStorage)
+    if(this.dataLocalStorage == "true"){
+      this.classe = 'dark';
+    } else {
+      this.classe = "";
+    }
   }
 }
